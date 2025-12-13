@@ -62,7 +62,7 @@ export default function Room() {
         </div>
 
         <button className="text-xs bg-zinc-800 hover:bg-red-600 px-3 py-1.5 rounded text-zinc-400 hover:text-white transition-all font-bold group flex items-center gap-2 disabled:opacity-50 uppercase cursor-pointer disabled:cursor-not-allowed">
-          <span className="group-hover:animate-pulse">♨️</span>
+          <span className="group-hover:animate-pulse max-md:hidden">♨️</span>
           Destroy Now
         </button>
       </header>
