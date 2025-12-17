@@ -29,6 +29,10 @@ const messages = new Elysia({ prefix: "/messages" }).use(authMiddleware).post(
   "/",
   ({ body, auth }) => {
     const { sender, text } = body;
+    const roomExists = redis.exists(`meta:${auth.roomId}`);
+    if (!roomExists) {
+      throw new Error("Room does not exist");
+    }
   },
   {
     query: z.object({ roomId: z.string() }),
