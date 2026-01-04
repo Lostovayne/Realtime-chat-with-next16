@@ -46,7 +46,9 @@ export default function Room() {
           <div className="h-8 bg-zinc-800 w-px" />
 
           <div className="flex flex-col">
-            <span className="text-xs text-zinc-500 uppercase">Self-Destruct</span>
+            <span className="text-xs text-zinc-500 uppercase">
+              Self-Destruct
+            </span>
             <span
               className={`text-sm font-bold flex items-center gap-2
               ${
@@ -56,7 +58,9 @@ export default function Room() {
               }
               `}
             >
-              {timeRemaining !== null ? formatTimeRemaining(timeRemaining) : "--:--"}
+              {timeRemaining !== null
+                ? formatTimeRemaining(timeRemaining)
+                : "--:--"}
             </span>
           </div>
         </div>
